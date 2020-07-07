@@ -1,0 +1,129 @@
+$fontSans : 'Montserrat', sans-serif;
+$red : #e74c3c ;
+$redAL : rgba(231, 76, 60, 0.95);
+$dark :  #3d3d3d;
+$redHover : #f4c2bc ;
+
+.Header {
+    margin: 1rem;
+}
+.Body {
+    margin: 1rem;
+    width: 100%;
+}
+
+.PrimaryChart {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem 0 0;
+
+    &> div:first-child {
+        width: 50%;
+        flex-direction: column;
+        display: flex;
+        background-color: white;
+        padding: 1rem 1rem 2rem 1rem;
+        margin: 1rem;
+    }
+
+    &> div:last-child {
+        width: 50%;
+        flex-direction: column;
+        display: flex;
+        background-color: white;
+        padding: 1rem 1rem 2rem 1rem;
+        margin: 1rem;
+    }
+
+    div > .wrap {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .bar {
+        background: $red;
+        width: 0;
+        margin: 0.25em 0;
+        color: #fff;
+        position: relative;
+        transition: width 6s, background 0.2s;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        border-radius: 20px;
+        clear: both;
+        &:nth-of-type(2n) {
+            background: lighten($red, 10%);
+        }
+        .label {
+            font-size: 0.75em;
+            padding: 0.6em;
+            background: white;
+            width: 8em;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+            font-family: $fontSans;
+            color: $dark;
+        }
+    }
+
+    .bar:hover {
+        background: $redHover;
+    }
+
+    .bar:after {
+        width: 10%;
+        background-color: grey;
+    }
+
+    .count {
+        position: absolute;
+        right: .25em;
+        top: .75em;
+        padding: .15em; 
+        font-size: .75em;
+        font-weight: bold;
+        font-family: $fontSans;
+    }
+    
+    .holder {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+}
+
+.numberChart {
+    width: 100%;
+    margin-left: 7.8rem;
+
+    div {
+        display: inline-block;
+        margin: 0 1rem;
+        color: $dark;
+        font-size: 1rem;
+    }
+}
+
+.listCheck {
+    margin: 0 2rem 2rem 1rem;
+}
+
+.item {
+    background-color: white;
+    margin: 1rem 0;
+
+    &> div {
+        display: inline-block;
+        padding: 1rem 0 1rem 0.5rem;
+        font-size: .75em;
+    }
+}
+
+.item:hover {
+    background-color:#fafafa;
+}
